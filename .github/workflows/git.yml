@@ -1,12 +1,17 @@
-name: Installing Git
+name: Git
 on: workflow_dispatch
 
 jobs:
-  git-job:
+  Git-first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Installing git
-        run: sudo apt install git -y
-      - name: Git version
-        run: git --version
-      
+      - name: Git install and version
+        run: |
+          sudo yum install git -y
+          git --version
+      - name: Docker install
+        run: |
+          sudo yum install docker -y
+          docker -version
+          
+        
