@@ -11,7 +11,7 @@ jobs:
           git --version
       - name: Docker install
         run: |
-          sudo yum install docker -y
+          sudo apt install docker -y
           docker -version
           
         
