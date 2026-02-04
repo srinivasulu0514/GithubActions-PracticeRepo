@@ -1,4 +1,4 @@
-name: Git
+name: Git and docker installation
 on: workflow_dispatch
 
 jobs:
@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Git install and version
         run: |
-          sudo yum install git -y
+          sudo apt install git -y
           git --version
       - name: Docker install
         run: |
